@@ -1,4 +1,4 @@
-import mongoose, { Schema, models } from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
 const ReviewSchema = new Schema(
   {
@@ -34,5 +34,5 @@ const CourseSchema = new Schema(
   { timestamps: { createdAt: true, updatedAt: false } }
 );
 
-const Course = models.Course || mongoose.model("Course", CourseSchema);
+const Course = mongoose.models.Course || mongoose.model("Course", CourseSchema);
 export default Course;
